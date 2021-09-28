@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+../date/
+
+  <title>初哥一明</title>
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../date/css/camtoh5ds.css" />
+  <link rel="stylesheet" href="../date/css/css.css" />
+  <link rel="stylesheet" href="../date/css/cssanniu.css" />
+  <link rel="stylesheet" href="../date/css/element_ui.css">
+  <link rel="stylesheet" href="../date/css/iconfont.css" />
+</head>
+
+<body>
+<div id="app">
+  <div style="position:absolute; top:0;width: 100%;text-align:center;z-index: 1000;">初哥哥科技 </div>
+  <div class="loading_image" v-if="!modelLoaded">
+	<el-progress :text-inside="true" :stroke-width="16" :percentage="modelLoadedPercent" style="width:60%;z-index:300;top: 80%;margin: 0 auto;"></el-progress>
+     <div style="position:absolute;top:0;left: 0;height: 100vh!important;width: 100%;"><img src="obj/FM.png"  class="bg-cover"></img></div>
+  </div>
+  <div style="position:absolute;bottom:20px;left: 20px;z-index:100;" @click="buttonControlReset"><img src="../date/textures/hf.png" style="height:80px;width:80px;"></img></div>
+  <div style="position:absolute;bottom:20px;right: 20px;z-index: 100;" @click="buttonControlRotate"><img src="../date/textures/xz.png" style="height:80px;width:80px;"></img></div>
+  <div style="position:absolute;top:0;left: 0;z-index:1;height: 100vh!important;width: 100%;" ><img src="../date/textures/BG.jpg" class="bg-cover" ></img></div>
+  <div class="image_background" style="position:absolute;z-index:50;">
+  </div>
+  <!-- 文字 -->
+</div>
+</body>
+<!-- JS脚本导入 -->
+<script src="../date/js/vue.js"></script>
+<script src="../date/build/three.js"></script>
+<script src="../date/js/jquery-1.8.2.min.js"></script>
+<script src="../date/js/controls/OrbitControls.js"></script>
+<script src="../date/js/loaders/GLTFLoader.js"></script>
+<script src="../date/js/postprocessing/EffectComposer.js"></script>
+<script src="../date/js/postprocessing/OutlinePass.js"></script>
+<script src="../date/js/postprocessing/ShaderPass.js"></script>
+<script src="../date/js/postprocessing/RenderPass.js"></script>
+<script src="../date/js/postprocessing/SSAARenderPass.js"></script>
+<script src="../date/js/shaders/CopyShader.js"></script>
+<script src="../date/js/loaders/DRACOLoader.js"></script>
+<script src="../date/无用libs/index.js"></script>
+<script src="obj/obj.man.js"></script>
+
+
+<style type="text/css">
+  * {
+    touch-action: none;
+  }
+  body {
+    font-family: Monospace;
+    background-color: #000;
+    color: #fff;
+    margin: 0px;
+    overflow: hidden;
+    position: fixed;
+  }
+  .loading_image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    background: rgba(0,0,0,0.8);
+  }
+  .hotspot-class{
+
+  }
+</style>
+</html>
